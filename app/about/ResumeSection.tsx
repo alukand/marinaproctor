@@ -13,33 +13,29 @@ const sections = [
 
 export default function ResumeSection() {
   return (
-    <div className="space-y-10">
+    <div>
       {sections.map((section, sectionIndex) => (
-        <ScrollReveal key={section.key} delay={sectionIndex * 0.08}>
-          <div className="grid md:grid-cols-[200px_1fr] gap-4 md:gap-8">
-            <h3 className="font-serif text-lg text-text-primary tracking-wide">
-              {section.label}
-            </h3>
-            <div className="space-y-3">
-              {resumeData[section.key].map((credit, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1"
-                >
-                  <div>
-                    <span className="text-text-primary text-sm">
-                      {credit.title}
-                    </span>
-                    <span className="text-text-secondary text-sm ml-2">
-                      — {credit.role}
-                    </span>
-                  </div>
-                  <span className="text-text-tertiary text-xs tracking-wider shrink-0">
-                    {credit.year}
-                  </span>
-                </div>
-              ))}
-            </div>
+        <ScrollReveal key={section.key} delay={sectionIndex * 0.08} className="mb-10">
+          <h3 className="text-lg font-semibold text-[var(--accent-gold)] mb-4 font-serif tracking-wide">
+            {section.label}
+          </h3>
+          <div>
+            {resumeData[section.key].map((credit, i) => (
+              <div
+                key={i}
+                className="grid grid-cols-1 sm:grid-cols-[1fr_1fr_auto] gap-1 sm:gap-4 py-3 border-b border-[var(--border-subtle)] items-baseline"
+              >
+                <span className="text-text-primary text-sm">
+                  {credit.title}
+                </span>
+                <span className="text-text-secondary text-sm">
+                  {credit.role}
+                </span>
+                <span className="text-text-tertiary text-xs tracking-wider sm:text-right">
+                  {credit.year}
+                </span>
+              </div>
+            ))}
           </div>
         </ScrollReveal>
       ))}

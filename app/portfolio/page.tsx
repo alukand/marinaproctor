@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <PageTransition className="pt-28 md:pt-36 pb-20 md:pb-28">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8">
-        <SectionHeading title="Portfolio" />
+    <PageTransition className="pt-32 pb-20">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+        <SectionHeading title="Portfolio" className="mb-16" />
         <PortfolioGrid showFilters />
       </div>
     </PageTransition>

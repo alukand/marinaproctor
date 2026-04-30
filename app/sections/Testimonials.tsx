@@ -5,7 +5,7 @@ import { testimonials } from "@/lib/portfolio-data";
 export default function Testimonials() {
   return (
     <section className="py-20 md:py-28">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         <SectionHeading title="Testimonials" />
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
