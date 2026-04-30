@@ -46,7 +46,7 @@ export default function Navigation() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navBg}`}
       >
-        <nav className="max-w-[1280px] mx-auto px-6 md:px-8 h-16 md:h-20 flex items-center justify-between">
+        <nav className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16 h-16 md:h-20 flex items-center justify-between">
           <Link
             href="/"
             className="font-serif text-text-primary text-lg md:text-xl tracking-[0.18em] uppercase hover:text-accent-gold transition-colors duration-250"

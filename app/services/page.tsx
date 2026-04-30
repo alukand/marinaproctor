@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import PageTransition from "@/components/PageTransition";
 import SectionHeading from "@/components/SectionHeading";
-import ServiceCard from "@/components/ServiceCard";
 import ScrollReveal from "@/components/ScrollReveal";
 
 export const metadata: Metadata = {
@@ -52,29 +51,39 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <PageTransition className="pt-28 md:pt-36 pb-20 md:pb-28">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8">
-        <SectionHeading title="Services" />
+    <PageTransition className="pt-32 pb-20">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+        <SectionHeading title="Services" className="mb-16" />
 
-        <div className="max-w-3xl">
+        <div>
           {services.map((service, i) => (
-            <ServiceCard
-              key={service.number}
-              number={service.number}
-              title={service.title}
-              description={service.description}
-              delay={i * 0.08}
-            />
+            <ScrollReveal key={service.number} delay={i * 0.08}>
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 md:gap-12 py-12 border-b border-[var(--border-subtle)]">
+                <div>
+                  <span className="block text-5xl md:text-6xl font-serif text-[var(--accent-gold)] opacity-30 leading-none mb-3">
+                    {service.number}
+                  </span>
+                  <h3 className="font-serif text-2xl text-text-primary tracking-wide">
+                    {service.title}
+                  </h3>
+                </div>
+                <div className="flex items-center">
+                  <p className="text-base text-[var(--text-secondary)] leading-relaxed max-w-lg">
+                    {service.description}
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
           ))}
         </div>
 
-        <ScrollReveal className="mt-16 border-t border-border-subtle pt-12">
-          <p className="text-text-secondary mb-6">
+        <ScrollReveal className="mt-20 text-center mb-20">
+          <p className="text-lg text-[var(--text-secondary)] mb-8">
             For rates and availability, please get in touch.
           </p>
           <Link
             href="/contact"
-            className="inline-block border border-accent-gold text-accent-gold px-8 py-3 text-sm tracking-wider uppercase hover:bg-accent-gold hover:text-bg-primary transition-all duration-300"
+            className="inline-block bg-[var(--accent-gold)] text-[var(--bg-primary)] font-medium tracking-wider px-10 py-4 text-sm uppercase hover:bg-[var(--accent-gold-hover)] transition-colors duration-300"
           >
             Get in Touch
           </Link>

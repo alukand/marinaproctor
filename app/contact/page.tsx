@@ -12,12 +12,11 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <PageTransition className="pt-28 md:pt-36 pb-20 md:pb-28">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8">
+    <PageTransition className="pt-32 pb-20">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+        <SectionHeading title="Get in Touch" className="mb-16" />
         <div className="grid md:grid-cols-2 gap-12 md:gap-20">
           <div>
-            <SectionHeading title="Get in Touch" />
-
             <ScrollReveal delay={0.1}>
               <p className="text-text-secondary leading-relaxed mb-10">
                 Whether you&rsquo;re a production coordinator booking a film, a

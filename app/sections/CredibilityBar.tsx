@@ -7,7 +7,7 @@ const studios = ["Universal", "Netflix", "Paramount", "FOX", "ABC/Sony"];
 export default function CredibilityBar() {
   return (
     <section className="bg-bg-secondary py-8 md:py-10 border-y border-border-subtle">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}

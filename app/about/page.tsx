@@ -13,57 +13,55 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <PageTransition className="pt-28 md:pt-36 pb-20 md:pb-28">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-8">
-        <div className="grid md:grid-cols-[2fr_3fr] gap-10 md:gap-16 items-start">
-          <ScrollReveal>
-            <div className="relative aspect-[3/4] overflow-hidden sticky top-28">
+    <PageTransition className="pt-32 pb-20">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+        <SectionHeading title="About" className="mb-16" />
+
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-start">
+          <ScrollReveal className="lg:col-span-2">
+            <div className="relative min-h-[350px] md:min-h-[400px] aspect-[3/4] overflow-hidden">
               <Image
                 src="/images/portrait.svg"
                 alt="Marina Proctor — Makeup Artist"
                 fill
                 className="object-cover"
-                sizes="(max-width: 768px) 100vw, 40vw"
+                sizes="(max-width: 1024px) 100vw, 40vw"
               />
             </div>
           </ScrollReveal>
 
-          <div>
-            <SectionHeading title="About" />
-
-            <ScrollReveal delay={0.1}>
-              <div className="space-y-5 text-text-secondary leading-relaxed">
-                <p>
-                  Marina Proctor is a professional Makeup Artist for Print,
-                  Television and Film who partners with photographers, directors
-                  and actors to achieve the perfect look, whether for a brand or a
-                  character. After spending over a decade working with boutique
-                  advertising agencies, photographers and filmmakers in Kansas
-                  City, Marina brings her Midwest sensibilities and work ethic to
-                  Los Angeles.
-                </p>
-                <p>
-                  Besides working with all the studios like Universal, FOX,
-                  Netflix, ABC/Sony, Paramount etc., Marina has collaborated with
-                  notable directors such as Lawrence Kasdan (Darling Companion) and
-                  Debra Granik (Winter&rsquo;s Bone). Her work has been featured
-                  in numerous films, TV shows, commercials, advertising campaigns
-                  and red carpet events.
-                </p>
-                <p>Marina is a proud member of IATSE Local 706.</p>
-              </div>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal delay={0.1} className="lg:col-span-3">
+            <div className="space-y-6 text-text-secondary leading-relaxed">
+              <p>
+                Marina Proctor is a professional Makeup Artist for Print,
+                Television and Film who partners with photographers, directors
+                and actors to achieve the perfect look, whether for a brand or a
+                character. After spending over a decade working with boutique
+                advertising agencies, photographers and filmmakers in Kansas
+                City, Marina brings her Midwest sensibilities and work ethic to
+                Los Angeles.
+              </p>
+              <p>
+                Besides working with all the studios like Universal, FOX,
+                Netflix, ABC/Sony, Paramount etc., Marina has collaborated with
+                notable directors such as Lawrence Kasdan (Darling Companion) and
+                Debra Granik (Winter&rsquo;s Bone). Her work has been featured
+                in numerous films, TV shows, commercials, advertising campaigns
+                and red carpet events.
+              </p>
+              <p>Marina is a proud member of IATSE Local 706.</p>
+            </div>
+          </ScrollReveal>
         </div>
 
-        <div className="mt-20 md:mt-28 border-t border-border-subtle pt-16">
-          <SectionHeading title="Credits & Resume" />
+        <div className="mt-24">
+          <SectionHeading title="Credits & Resume" className="mb-16" />
           <ResumeSection />
 
-          <ScrollReveal className="mt-12">
+          <ScrollReveal className="mt-16">
             <a
               href="#"
-              className="inline-block border border-accent-gold text-accent-gold px-6 py-3 text-sm tracking-wider uppercase hover:bg-accent-gold hover:text-bg-primary transition-all duration-300"
+              className="inline-block border border-[var(--accent-gold)] text-[var(--accent-gold)] px-8 py-3 text-sm tracking-wider uppercase hover:bg-[var(--accent-gold)] hover:text-black transition-all duration-300"
             >
               Download Resume (PDF)
             </a>
