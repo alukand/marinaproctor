@@ -55,7 +55,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans">
         <Navigation />
-        <div className="flex-1">{children}</div>
+        <main className="flex-1 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-16 pt-[120px]">
+          {children}
+        </main>
         <div className="pt-32">
           <Footer />
         </div>
