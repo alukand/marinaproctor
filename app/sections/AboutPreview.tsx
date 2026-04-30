@@ -7,7 +7,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 export default function AboutPreview() {
   return (
     <section className="py-20 md:py-28 bg-bg-secondary">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-16">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-16">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
           <ScrollReveal>
             <div className="relative aspect-[3/4] overflow-hidden">

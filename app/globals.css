@@ -65,6 +65,15 @@ img {
   height: auto;
 }
 
+.full-bleed {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
 @keyframes scroll-hint {
   0%, 100% {
     opacity: 0;
