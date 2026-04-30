@@ -7,13 +7,13 @@ import ContactCTA from "./sections/ContactCTA";
 
 export default function Home() {
   return (
-    <>
+    <div className="full-bleed -mt-[120px]">
       <Hero />
       <CredibilityBar />
       <SelectedWork />
       <AboutPreview />
       <Testimonials />
       <ContactCTA />
-    </>
+    </div>
   );
 }
